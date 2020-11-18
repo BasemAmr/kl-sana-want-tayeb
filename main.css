@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.container{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+section{
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto;
+    background: transparent;
+    border: 2px solid #fff;
+    display: none;
+    font-family: 'Almarai', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    line-height: 2.5;
+    position: relative;
+}
+section span{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 75%;
+    left: 1%;
+    display: none;
+}
+
+/* Neon Button Effect! */
+
+a{
+    position: relative;
+    display: inline-block;
+    color: #2196f3;
+    padding: 15px 30px;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    left: 45%;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    margin: 5vh 0 0 0;
+}
+
+a:hover{
+    color: #033969;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: .5s;
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .75s;
+}
+
+/* Animated Background */
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(2, 0, .6,1), rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+.box div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 5px solid rgba(255, 255, 255, .8);
+}
+.box div:nth-of-type(1){
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-of-type(2){
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.box div:nth-of-type(3){
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-of-type(4){
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-of-type(5){
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+.box div:nth-of-type(6){
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+.box div:nth-of-type(7){
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+.box div:nth-of-type(8){
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+.box div:nth-of-type(9){
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+.box div:nth-of-type(10){
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+a{
+    left: 35%;  
+    padding: 15px 25px;
+}
+section span{
+    top: 85%;
+}
+.box div{
+    width: 50px;
+    height: 50px;
+}
+}
+@media (min-width: 481px) and (max-width: 768px){
+    a{
+        left:  42%;
+        padding: 15px 25px;
+    }
+    .box div{
+        width: 70px;
+        height: 70px;
+    }
+    section span{
+        top: 75%;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+    /* Style the page */
+
+a{
+    left:  45%;
+}
+.box div{
+    width: 60px;
+    height: 60px;
+}
+}
+@media (min-width: 1025px) and (max-width: 1200px){ 
+a{
+    left:  45%;
+    padding: 15px 25px;
+}
+}
+@media (min-width: 1201px){
+.box div{
+    width: 70px;
+    height: 70px;
+}
+section span{
+    top: 65%;
+}
+}
